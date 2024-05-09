@@ -4,10 +4,10 @@ namespace TestAPI.Services
 {
     public interface IUserService
     {
-        public IEnumerable<User> getAllUsers();
-        public IEnumerable<object> getUserAndProject();
-        public User addUser(User user);
-        public User updateUser(User user);
-        public User deleteUser(int Id);
+        public IEnumerable<User> GetAllUsers();
+        public IEnumerable<object> GetUserAndProject();
+        public User AddUser(User user);
+        public User UpdateUser(User user);
+        public User DeleteUser(int Id);
     }
 }

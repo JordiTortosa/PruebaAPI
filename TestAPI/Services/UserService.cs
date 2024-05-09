@@ -11,27 +11,27 @@ namespace TestAPI.Services
         {
             _userRepository = userRepository;
         }
-        public IEnumerable<User> getAllUsers()
+        public IEnumerable<User> GetAllUsers()
         {
             return _userRepository.GetAllUsers();
         }
-        public IEnumerable<object> getUserAndProject()
+        public IEnumerable<object> GetUserAndProject()
         {
-            return _userRepository.getUserAndProject(); ;
+            return _userRepository.GetUserAndProject(); ;
         }
-        public User addUser(User user)
+        public User AddUser(User user)
         {
-            _userRepository.addUser(user);
+            _userRepository.AddUser(user);
             return user;
         }
-        public User updateUser(User user)
+        public User UpdateUser(User user)
         {
-            return _userRepository.updateUser(user);
+            return _userRepository.UpdateUser(user);
         }
         
-        public User deleteUser(int Id)
+        public User DeleteUser(int Id)
         {
-            return _userRepository.deleteUser(Id);
+            return _userRepository.DeleteUser(Id);
         }
     }
 }

@@ -22,21 +22,21 @@ namespace TestAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
-            var users = _userService.getAllUsers();
+            var users = _userService.GetAllUsers();
             return Ok(users);
         }
         
         [HttpGet("Project")]
         public async Task<ActionResult<IEnumerable<User>>> GetUserAndProject()
         {
-            var userAndProject = _userService.getUserAndProject();
+            var userAndProject = _userService.GetUserAndProject();
             return Ok(userAndProject);
         }
 
         [HttpPost]
         public async Task<ActionResult<User>> addUser(User user)
         {
-            var addedUser = _userService.addUser(user);
+            var addedUser = _userService.AddUser(user);
             return Ok(addedUser);
         }
         /*
@@ -50,14 +50,14 @@ namespace TestAPI.Controllers
         [HttpPut]
         public async Task<ActionResult<User>> updateUser(User user)
         {
-            var updatedUser = _userService.updateUser(user);
+            var updatedUser = _userService.UpdateUser(user);
             return Ok(updatedUser);
         }
         
         [HttpDelete]
         public async Task<ActionResult<User>> deleteUser(int Id)
         {
-            var changedUser = _userService.deleteUser(Id);
+            var changedUser = _userService.DeleteUser(Id);
             return Ok(changedUser);
         }
 

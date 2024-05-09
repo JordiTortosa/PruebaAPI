@@ -16,7 +16,7 @@ namespace TestAPI.Repositories
         {
             return _dbContext.Users.ToList();
         }
-        public IEnumerable<object> getUserAndProject()
+        public IEnumerable<object> GetUserAndProject()
         {
             var userAndProject = from user in _dbContext.Users
                                  join project in _dbContext.Projects
@@ -31,20 +31,20 @@ namespace TestAPI.Repositories
                                  };
             return userAndProject.ToList();
         }
-        public User addUser(User user)
+        public User AddUser(User user)
         {
             _dbContext.Users.Add(user);
             _dbContext.SaveChanges();
             return user;
         }
-        public User updateUser(User user)
+        public User UpdateUser(User user)
         {
             _dbContext.Users.Update(user);
             _dbContext.SaveChanges();
             return user;
         }
 
-        public User deleteUser(int Id)
+        public User DeleteUser(int Id)
         {
             var user = _dbContext.Users.FirstOrDefault(u => u.Id == Id);
             _dbContext.Users.Remove(user);
